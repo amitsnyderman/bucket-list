@@ -1,0 +1,32 @@
+<h1>Items</h1>
+
+<% if !current_user.buckets.blank? %>
+	<% for bucket in current_user.buckets.uniq %>
+	<h2><%= bucket.code %></h2>
+		<% if !bucket.items.for_user(current_user).blank? %>
+			<ul>
+			<% for item in bucket.items.for_user(current_user) %>
+				<li><%= item.text %></li>
+			<% end %>
+			</ul>
+		<% else %>
+			No items in bucket.
+		<% end %>
+	<% end %>
+<% else %>
+	No buckets.
+<% end %>
+
+<h1>Actions</h1>
+
+<% if !current_user.actions.blank? %>
+	<ul>
+	<% for action in current_user.actions %>
+		<li>
+			<strong><%= action.type.demodulize %></strong> action for <strong><%= action.bucket.code %></strong> bucket
+		</li>
+	<% end %>
+	</ul>
+<% else %>
+	No actions.
+<% end %>

@@ -1,0 +1,70 @@
+body {
+	font-family: helvetica,sans-serif;
+	font-size: .8em;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	position: relative;
+	padding: 5px 20px;
+	margin-bottom: 10px;
+	background-color: #000;
+	color: #FFF;
+}
+header:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+header h1 {
+	float: left;
+	margin: 0;
+	font-weight: bold;
+}
+header navigation {
+	float: left;
+	margin: 9px 0 0 20px;
+}
+header navigation a {
+	padding: 2px 5px;
+	border: 1px solid white;
+}
+header navigation a:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+}
+header .authn {
+	float: right;
+	line-height: 2em;
+}
+header a {
+	color: #FFF;
+	text-decoration: none;
+}
+header a:hover {
+	text-decoration: underline;
+}
+
+section#messaging {
+	padding: 0 20px;
+}
+section#messaging p {
+	border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 5px;
+}
+section#messaging p.notice {
+	border-color: #DDD;
+	background-color: #EEE;
+}
+section#messaging p.alert {
+	border-color: #DDD;
+	background-color: #EEE;
+}
+
+section#content {
+	padding: 0 20px;
+}
+
+section#content h1 small {
+	font-size: 10px;
+}
